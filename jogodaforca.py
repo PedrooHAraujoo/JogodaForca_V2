@@ -1,5 +1,70 @@
 import os
 class JogodaForca:
+    estagios = [
+        """
+           -----
+           |   |
+               |
+               |
+               |
+               |
+        =========
+        """,
+        """
+           -----
+           |   |
+           O   |
+               |
+               |
+               |
+        =========
+        """,
+        """
+           -----
+           |   |
+           O   |
+           |   |
+               |
+               |
+        =========
+        """,
+        """
+           -----
+           |   |
+           O   |
+          /|   |
+               |
+               |
+        =========
+        """,
+        """
+           -----
+           |   |
+           O   |
+          /|\\  |
+               |
+               |
+        =========
+        """,
+        """
+           -----
+           |   |
+           O   |
+          /|\\  |
+          /    |
+               |
+        =========
+        """,
+        """
+           -----
+           |   |
+           O   |
+          /|\\  |
+          / \\  |
+               |
+        =========
+        """
+    ]
     def __init__(self, palavra_secreta):
         self.palavra_secreta = palavra_secreta
         self.lista_de_acertos = ['_' for _ in palavra_secreta]
@@ -8,6 +73,7 @@ class JogodaForca:
     def limpar_tela(self):
         os.system('cls' if os.name == 'nt' else 'clear')
     def exibir_estado_atual(self):
+        print(JogodaForca.estagios[6 - self.tentativas])
         print(''.join(self.lista_de_acertos))
         print(f'Tentativas restantes: {self.tentativas}')
         print(f'Letras tentadas: {self.letras_tentadas}')
@@ -26,6 +92,7 @@ class JogodaForca:
         return '_' not in self.lista_de_acertos
     def iniciar_jogo(self):
         while self.tentativas > 0 and not self.palavra_descoberta():
+            self.limpar_tela()
             self.exibir_estado_atual()
             letra_do_jogador = input('Digite uma letra: ').lower().strip()
             if len(letra_do_jogador) == 1 and letra_do_jogador.isalpha():
@@ -41,7 +108,6 @@ def main():
     print('Bem Vindo ao Jogo da Forca!')
     palavra_secreta = input('Digite a palavra secreta: ').lower().strip()
     jogo = JogodaForca(palavra_secreta)
-    jogo.limpar_tela()
     jogo.iniciar_jogo()
 if __name__ == '__main__':
     main()
