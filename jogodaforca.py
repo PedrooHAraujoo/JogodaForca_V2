@@ -20,19 +20,20 @@ class JogodaForca:
                 for indice, caractere in enumerate(self.palavra_secreta):
                     if caractere == letra:
                         self.lista_de_acertos[indice] = letra
-                    else:
-                        self.tentativas -= 1
+            else:
+                self.tentativas -= 1
     def palavra_descoberta(self):
         return '_' not in self.lista_de_acertos
     def iniciar_jogo(self):
         while self.tentativas > 0 and not self.palavra_descoberta():
             self.exibir_estado_atual()
-            letra_do_jogasdor = input('Digite uma letra: ').lower().strip()
-            if len(letra_do_jogasdor) == 1:
-                self.verificar_letra(letra_do_jogasdor)
+            letra_do_jogador = input('Digite uma letra: ').lower().strip()
+            if len(letra_do_jogador) == 1 and letra_do_jogador.isalpha():
+                self.verificar_letra(letra_do_jogador)
             else:
                 print('Por favor, digite apenas uma letra.')
-        if self.palavra_descoberta:
+        self.limpar_tela()
+        if self.palavra_descoberta():
             print(f'Parabéns, você ganhou! A palavra era: {self.palavra_secreta}')
         else:
             print(f'Fim de jogo! A palavra era: {self.palavra_secreta}')
