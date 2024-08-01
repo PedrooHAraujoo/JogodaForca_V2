@@ -1,4 +1,5 @@
 import os
+import time
 class JogodaForca:
     estagios = [
         """
@@ -80,6 +81,7 @@ class JogodaForca:
     def verificar_letra(self,letra):
         if letra in self.letras_tentadas:
             print('Você já tentou essa letra!')
+            time.sleep(2)
         else:
             self.letras_tentadas.append(letra)
             if letra in self.palavra_secreta:
@@ -99,6 +101,7 @@ class JogodaForca:
                 self.verificar_letra(letra_do_jogador)
             else:
                 print('Por favor, digite apenas uma letra.')
+                time.sleep(2)
         self.limpar_tela()
         if self.palavra_descoberta():
             print(f'Parabéns, você ganhou! A palavra era: {self.palavra_secreta}')
