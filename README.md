@@ -1,60 +1,62 @@
-# Jogo da Forca
 
-## Descrição
+# Jogo da Forca em Python (Versão 2)
 
-Bem-vindo ao Jogo da Forca! Este projeto é uma implementação do clássico jogo da forca em Python, agora em sua versão 2.0, com o uso de Programação Orientada a Objetos (POO). Nesta versão, o código foi reestruturado para ser mais modular e eficiente. Além disso, incluímos o desenho dinâmico da forca, que evolui conforme o jogo avança, e corrigimos diversos bugs para melhorar a experiência do usuário.
+Bem-vindo à versão 2 do Jogo da Forca em Python! Esta nova versão traz várias melhorias, incluindo a implementação com Programação Orientada a Objetos (POO), uma melhor visualização do desenho da forca e correção de bugs.
 
 ## Funcionalidades
 
-- **Programação Orientada a Objetos (POO)**: Estruturação do código em classes e objetos para maior modularidade e manutenção.
-- **Desenho da Forca**: O jogo agora exibe o desenho da forca em estágios à medida que o jogador comete erros.
-- **Validação de Entradas**: Somente letras são aceitas como tentativas, garantindo uma experiência de jogo mais coerente.
-- **Feedback de Letras Tentadas**: Aviso claro quando uma letra já foi tentada, com um tempo maior de exibição.
+- Implementação usando Programação Orientada a Objetos (POO).
+- Visualização gráfica do desenho da forca.
+- Validação de entradas, aceitando apenas letras e não números.
+- Mensagens de aviso melhoradas, com maior tempo de exibição.
+- Correção de bugs.
 
 ## Como Jogar
 
-1. Clone o repositório:
-    ```bash
-    git clone https://github.com/seu-usuario/jogo-da-forca.git
-    ```
-2. Navegue até o diretório do projeto:
-    ```bash
-    cd jogo-da-forca
-    ```
-3. Execute o jogo:
-    ```bash
-    python jogo_da_forca.py
-    ```
+1. **Iniciar o Jogo**: Execute o script `main.py`.
+2. **Palavra Secreta**: Insira a palavra secreta que os outros jogadores devem adivinhar.
+3. **Adivinhar Letras**: Os jogadores devem adivinhar uma letra por vez. Se a letra estiver correta, ela será revelada na palavra secreta. Caso contrário, você perderá uma tentativa.
+4. **Desenho da Forca**: O desenho da forca será atualizado a cada tentativa errada.
+5. **Vencer o Jogo**: Adivinhe todas as letras antes que as tentativas acabem para ganhar o jogo.
+
+## Instalação
+
+Clone o repositório para sua máquina local:
+
+```bash
+git clone https://github.com/PedrooHAraujoo/JogodaForca_V2.git
+```
+
+Navegue até o diretório do projeto:
+
+```bash
+cd JogodaForca_V2
+```
+
+Execute o script principal:
+
+```bash
+python main.py
+```
 
 ## Exemplo de Uso
 
-Após iniciar o jogo, você será solicitado a inserir uma palavra secreta. Em seguida, o jogo limpará o terminal e começará a execução. Tente adivinhar a palavra letra por letra. Se errar muitas vezes, a forca será desenhada completamente e você perderá o jogo. Boa sorte!
+```python
+# Exemplo de como iniciar o jogo
+if __name__ == '__main__':
+    main()
+```
 
-## Contribuições
+## Minha Jornada
 
-Sinta-se à vontade para contribuir com melhorias, novas funcionalidades ou correções de bugs. Para contribuir:
+Estou muito feliz em compartilhar a versão 2 do Jogo da Forca! Através deste projeto, pude aprender e aplicar conceitos de Programação Orientada a Objetos (POO), manipulação de strings, e validação de entradas. Estou ansioso para aplicar esses conhecimentos no mercado de trabalho e continuar aprimorando minhas habilidades. Agradeço por todo o apoio e estou aberto a sugestões e colaborações!
 
-1. Faça um fork do projeto.
-2. Crie uma nova branch com a sua feature ou correção de bug:
-    ```
-    git checkout -b minha-feature
-    ```
-3. Faça commit das suas alterações:
-    ```
-    git commit -m 'Adicionei uma nova feature'
-    ```
-4. Envie para o branch original:
-    ```
-    git push origin minha-feature
-    ```
-5. Crie um Pull Request.
+## Contribuição
 
-## Agradecimentos
+Sinta-se à vontade para abrir issues e enviar pull requests. Toda contribuição é bem-vinda!
 
-Estou extremamente satisfeito com o meu progresso e em poder colocar em prática tudo o que venho aprendendo. Cada linha de código escrita me deixa mais entusiasmado com as possibilidades que a programação oferece. Minha maior motivação é aplicar esses conhecimentos no mercado de trabalho, contribuindo com projetos reais e fazendo parte de uma equipe que valoriza a inovação e a tecnologia.
+## Contato
 
----
+Para mais informações, entre em contato através do meu [perfil no GitHub](https://github.com/PedrooHAraujoo).
 
 #tecnologia #game #estruturadedados #programacao
-
----
